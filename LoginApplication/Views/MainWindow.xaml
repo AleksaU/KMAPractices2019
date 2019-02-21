@@ -1,0 +1,17 @@
+﻿<Window x:Class="LoginApplication.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LoginApplication"
+        xmlns:userControls="clr-namespace:LoginApplication.Views.UserControls"
+        xmlns:fa="http://schemas.fontawesome.io/icons/"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid IsEnabled="{Binding IsAnabled, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}">
+        <ContentControl Name="_contentControl" IsEnabled="{Binding IsAnabled, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
+        <fa:ImageAwesome Icon="Refresh" Height="30" Spin="True" 
+                         Visibility="{Binding LoaderVisibility, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
+        
+    </Grid>
+</Window>
